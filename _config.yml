@@ -1,6 +1,6 @@
 # Site settings
 title: "Jonathan Pichot"
-description: "Passionate Urbanist • Web Developer • Emerging Data Scientist"
+description: "Urbanist at the intersection of the web, data, and product"
 
 # Build settings
 markdown: kramdown
@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Jonathan Pichot"
-resume_title:                   "Passionate Urbanist • Web Developer • Emerging Data Scientist"
+resume_title:                   "Urbanist at the intersection of the web, data, and product"
 resume_contact_email:           "jonathan@pichot.us"
 
 # use "yes" to display the email contact button,
