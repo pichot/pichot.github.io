@@ -49,8 +49,6 @@
   }
 
   .title-bar {
-    @include section_border;
-    margin-top: 2rem;
     padding: .4rem 0;
     @include clearfix;
 
@@ -75,15 +73,16 @@
 }
 
 .icon-links {
-  margin: 0;
+  margin-top: 1rem;
   padding: 0;
   list-style: none;
   position: relative;
   top: 4px;
   font-size: 1.75rem;
+  text-align: center;
+  display: block;
 
   @include media_larger_than_mobile {
-    float: right;
     border-top: none;
     padding-top: 0;
   }

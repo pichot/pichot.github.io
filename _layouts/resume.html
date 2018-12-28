@@ -32,121 +32,31 @@
           <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
 
           <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
-          {% include icon-links.html %}
         </div>
+
+        {% include icon-links.html %}
 
         <div class="executive-summary" itemprop="description">
-          <p>Hello! I'm a New York-based web developer and product manager with an enduring fascination with cities. I've worked for software companies
-          and city governments, always looking to use technology to improve the way cities function and the lives of the people that live in them.</p>
+          <p>I'm a New York-based software developer and product manager with an enduring fascination of cities. I've worked for software companies
+          and city governments, working to use technology to improve the way cities function and the lives of the people that live in them.</p>
         </div>
 
-        {% if site.resume_looking_for_work == 'yes' %}
         <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-        {% elsif site.resume_looking_for_work == 'no' %}
-        <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
-        {% else %}
-        {% endif %}
-
       </header>
 
-      {% if site.resume_section_experience %}
-      <!-- begin Experience -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Experience</h2>
-        </header>
-
-        {% for job in site.data.experience %}
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">New York City <a href="http://www1.nyc.gov/site/planning/index.page">Department of City Planning</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Product Lead &bull; May 2017 &mdash; Present</h4>
-          <p class="resume-item-copy">Working to improve the way New York City puts its money to work. Building data-driven digital products for
-            urban planners and city agencies that empower them to make better capital investment decisions.</p>
-        </div><!-- end of resume-item -->
-
-        <!-- another resume item -->
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">New York University <a href="http://marroninstitute.nyu.edu/">Marron Institute</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Graduate Research Assistant &bull; Jan 2017 &mdash; May 2017</h4>
-          <p class="resume-item-copy">Collecting data on formal and informal public transportation in cities around the world for the <a href="http://marroninstitute.nyu.edu/programs/urban-expansion">Urban Expansion Project</a>.</p>
-        </div><!-- end of resume-item -->
-
-        <!-- another resume item -->
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name"><a href="http://mightyinthemidwest.com/">Mighty in the Midwest</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Developer &bull; Apr 2016 &mdash; Aug 2016</h4>
-          <p class="resume-item-copy">
-            <ul>
-              <li>Built web applications including an interactive and searchable <a href="http://www.artprize.org/map/">web map</a> for an international art competition with Mapbox and AngularJS.</li>
-              <li>Wrote data export scripts and data-munging middleware in Ruby and SQL.</li>
-              <li>Defined customer’s technical needs into concrete deliverables, including and provided high level strategic and technical direction.</li>
-            </ul>
-          </p>
-        </div><!-- end of resume-item -->
-
-        <!-- another resume item -->
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name"><a href="http://downtowngr.org/">Downtown Grand Rapids Inc.</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Digital and Data Consultant &bull; Aug 2014 &mdash; Jul 2015</h4>
-          <p class="resume-item-copy">
-            <ul>
-              <li>Lead digital strategy for the downtown development authority of Grand Rapids, Michigan.</li>
-              <li>Managed a user-research driven website development project.</li>
-              <li>Built custom APIs collecting geospatial data from proprietary and open-source APIs.</li>
-              <li>Deployed internal digital tools including a customer relationship management platform built on Nationbuilder.</li>
-              <li>Spoke about open data and citizen engagement at regional conferences.</li>
-            </ul>
-          </p>
-        </div><!-- end of resume-item -->
-
-        <!-- another resume item -->
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name"><a href="http://collectiveidea.com/">Collective Idea</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Developer &bull; Sep 2012 &mdash; Jul 2014</h4>
-          <p class="resume-item-copy">
-            <ul>
-              <li>Developed and maintained custom web and API applications for startups and enterprise clients using a modern open-source web stack built on Ruby, Rails and Javascript.</li>
-              <li>Practiced test-driven development, pair-programming, and agile development.</li>
-              <li>Helped run local Ruby meetup group and taught a class for beginner programming in javascript.</li>
-            </ul>
-          </p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
-
-      </section>
-      <!-- end Experience -->
-      {% endif %}
-
-
-      {% if site.resume_section_education %}
-      <!-- begin Education -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Education</h2>
+          <h2>Currently At</h2>
         </header>
 
-        {% for education in site.data.education %}
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name">New York University <a href="http://cusp.nyu.edu">Center for Urban Science + Progress</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Masters of Science, Applied Urban Science and Informatics &bull; 2017 (anticipated)</h4>
-          <p class="resume-item-copy">Graduate level courses in data analytics, statistics, machine learning, urban planning and policy.</p>
+        <div class="resume-item">
+          <h3 class="resume-item-title"><a href="https://planninglabs.nyc">NYC Planning Labs</a></h3>
+          <h4 class="resume-item-details">Developer & Product Manager</h4>
+          <p class="resume-item-copy">Building the future of City Planning with open source software, vector map tiles, and CSVs.</p>
         </div>
+      </section>  
 
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name"><a href="http://www.puc.edu">Pacific Union College</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Bachelor of Arts, European History and French &bull; 2010</h4>
-          <p class="resume-item-copy">Graduated Summa Cum Laude, with Honors.</p>
-        </div>
-
-      </section>
-      <!-- end Education -->
-      {% endif %}
-
-
-      {% if site.resume_section_projects %}
-      <!-- begin Projects -->
-      <section class="content-section">
+      <!-- <section class="content-section">
         <header class="section-header">
           <h2>Projects</h2>
         </header>
@@ -154,69 +64,28 @@
         <div class="resume-item">
           <h3 class="resume-item-title"><a href="http://donutlocator.io">donutfinder.io</a></h3>
           <h4 class="resume-item-details">Founder & Primary Developer &bull; 2012 &mdash; Present</h4>
-          <p class="resume-item-copy">Donut Locator is an open source node/ember app that lets users find donuts within a defined radius from their home.</p>
+          Donut Locator is an open source node/ember app that lets users find donuts within a defined radius from their home.</p>
+
+        </div>
+      </section> -->
+
+      <!-- <section class="content-section">
+
+        <header class="section-header">
+          <h2>Writing</h2>
+        </header>
+
+        <div class="resume-item">
+            <p class="resume-item-copy">I write mostly on Svbtle and Medium. This is a list of other writing around the web.</p>
           <ul class="resume-item-list">
-            <li>Ate lots of donuts</li>
-            <li>Fell asleep rarely</li>
-            <li>Left promptly at end of day (sometimes earlier)</li>
+            <li><a href="https://collectiveidea.com/blog/archives/2013/02/25/becoming-a-rubyist">Becoming a Rubyist</a> (2013) - Collective Idea blog</li>
           </ul>
         </div>
+      </section> -->
 
-        <div class="resume-item">
-          <h3 class="resume-item-title">Springfield Donut Eater's User Group</h3>
-          <h4 class="resume-item-details">Co-Founder & Organizer &bull; 2007 &mdash; Present</h4>
-          <p class="resume-item-copy">DEUG is a local monthly meetup in Springfield where we share all the latest tips and tricks for dat donut lifestyle. I organize the group, and typically eat most of the donuts.</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Projects -->
-      {% endif %}
-
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
-
+      <!-- <section class="content-section">
         <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Skills -->
-      {% endif %}
-
-      {% if site.resume_section_recognition %}
-      <!-- begin Recognition -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Recognition</h2>
-        </header>
-
-        {% for recognition in site.data.recognitions %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
-          <p class="resume-item-copy">{{ recognition.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Recognition -->
-      {% endif %}
-
-      {% if site.resume_section_associations %}
-      <!-- begin Associations -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Associations</h2>
+          <h2>Talks & Media</h2>
         </header>
 
         {% for association in site.data.associations %}
@@ -227,68 +96,10 @@
         </div>
         {% endfor %}
 
-      </section>
-      <!-- end Associations -->
-      {% endif %}
-
-      {% if site.resume_section_interests %}
-      <!-- begin Interests -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Outside Interests</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for interest in site.data.interests %}
-            <li>{{ interest.description }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-      </section>
-      <!-- end Interests -->
-      {% endif %}
-
-      {% if site.resume_section_links %}
-      <!-- begin Links -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Additional Links</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for link in site.data.links %}
-            <li><a href={{ link.url }} itemprop="url">{{ link.description }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-
-      </section>
-      <!-- end Links -->
-      {% endif %}
-
-      {% if site.resume_print_social_links %}
-      <!-- begin Print Social Links -->
-      <section class="content-section print-only">
-
-        <header class="section-header">
-          <h2>Social Links</h2>
-        </header>
-
-        <div class="resume-item">
-        {% include print-social-links.html %}
-        </div>
-
-      </section>
-      <!-- end Print Social Links -->
-      {% endif %}
+      </section> -->
 
       <footer class="page-footer">
-        <p class="footer-line">Template by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork it on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
+        <p class="footer-line">Original template by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork it on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
       </footer>
 
     </div>
